@@ -8,8 +8,10 @@ module.exports = {
     const booking = await Booking.create({
       usuario: user_id,
       spot: spot_id,
-      data
+      date: data
     });
+
+    console.log(booking);
     await booking
       .populate("Usuario")
       .populate("Spot")
